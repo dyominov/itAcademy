@@ -1,11 +1,18 @@
-import java.util.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Callable;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MyThread implements Callable<List<Byte>> {
 
     private List<Byte> list;
+    static AtomicInteger length;
+
     MyThread(List<Byte> list) {
         this.list = list;
+        length = new AtomicInteger(0);
     }
 
     @Override
@@ -21,6 +28,7 @@ public class MyThread implements Callable<List<Byte>> {
                         if (sub.size() > max.size()) {
                             max = sub;
                         }
+                        length = new AtomicInteger(sub.size());
                     } else {
                         seen.add(sub);
                     }
