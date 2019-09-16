@@ -1,3 +1,5 @@
+package task1;
+
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class PrimeWithManyCollections extends Thread {

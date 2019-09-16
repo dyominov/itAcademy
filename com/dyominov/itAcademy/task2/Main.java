@@ -1,10 +1,12 @@
+package task2;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.*;
 
-public class MainWithExecutor {
+public class Main {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         Scanner in = new Scanner(System.in);
         int start = in.nextInt();

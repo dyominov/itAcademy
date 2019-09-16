@@ -1,3 +1,5 @@
+package task2;
+
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class PrimeWithOneCollectionExecutor implements Runnable {
