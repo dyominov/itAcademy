@@ -1,4 +1,4 @@
-package tmp.task1.part3;
+package task1.part3;
 
 import java.util.Collections;
 import java.util.HashSet;
