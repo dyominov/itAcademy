@@ -1,4 +1,4 @@
-package task3;
+package task1.part3;
 
 import java.io.File;
 import java.io.IOException;

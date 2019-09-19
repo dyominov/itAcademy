@@ -1,19 +1,22 @@
-package task2;
+package task1.part2;
 
-import java.util.concurrent.ArrayBlockingQueue;
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.concurrent.Callable;
 
-public class PrimeWithOneCollectionExecutor implements Runnable {
-    static ArrayBlockingQueue<Integer> primeList;
+public class PrimeWithManyCollectionExecutor implements Callable<Queue<Integer>> {
     private final int start;
     private final int end;
 
-    PrimeWithOneCollectionExecutor(int start, int end) {
+    PrimeWithManyCollectionExecutor(int start, int end) {
         this.start = start;
         this.end = end;
     }
 
+
     @Override
-    public void run() {
+    public Queue<Integer> call() {
+        Queue<Integer> queue = new ArrayDeque<>();
         for (int n = Math.max(2, start); n <= end; n++) {
             boolean prime = true;
             for (int j = 2; j <= n / 2; j++) {
@@ -22,9 +25,13 @@ public class PrimeWithOneCollectionExecutor implements Runnable {
                     break;
                 }
             }
+
             if (prime) {
-                primeList.add(n);
+                queue.add(n);
             }
+
         }
+        return queue;
     }
+
 }
