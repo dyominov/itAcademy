@@ -1,4 +1,4 @@
-package task1;
+package task1.part1;
 
 import java.util.concurrent.ArrayBlockingQueue;
 

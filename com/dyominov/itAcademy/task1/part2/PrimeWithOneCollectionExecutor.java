@@ -1,13 +1,13 @@
-package task1;
+package task1.part2;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class PrimeWithOneCollection extends Thread {
-    public static ArrayBlockingQueue<Integer> primeList;
+public class PrimeWithOneCollectionExecutor implements Runnable {
+    static ArrayBlockingQueue<Integer> primeList;
     private final int start;
     private final int end;
 
-    public PrimeWithOneCollection(int start, int end) {
+    PrimeWithOneCollectionExecutor(int start, int end) {
         this.start = start;
         this.end = end;
     }
@@ -22,12 +22,9 @@ public class PrimeWithOneCollection extends Thread {
                     break;
                 }
             }
-
             if (prime) {
                 primeList.add(n);
-
             }
-
         }
     }
 }
