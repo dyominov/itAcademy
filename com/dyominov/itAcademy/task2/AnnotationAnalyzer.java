@@ -7,7 +7,7 @@ import java.util.List;
 
 class AnnotationAnalyzer {
 
-    List<Class<?>> analyz(List<Class<?>> classes, Class<? extends Annotation> annotation) {
+    List<Class<?>> analyze(List<Class<?>> classes, Class<? extends Annotation> annotation) {
         List<Class<?>> classesWithAnnotation = new ArrayList<>();
         for (Class<?> aClass : classes) {
             if (aClass.isAnnotationPresent(annotation)) {
