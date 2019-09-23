@@ -1,6 +1,5 @@
 package task1.utils;
 
-
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class Util {
